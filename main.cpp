@@ -12,11 +12,17 @@ int main(int argc, char *argv[])
     Diap d;
 
     SuppQueue q(100);
+    SuppKbrd k;
 
-    for (int j = 0; j < q.getSize(); ++j)
-        f.calc(q);
+//    for (int j = 0; j < q.getSize() - 1; ++j)
+//        d.calc(q);
 
-    std::cout << f;
+    for (int i = 0; i < 10; ++i)
+        d.calc(k);
+
+    //d.calc(q);
+
+    std::cout << d;
 
     return 0;
 }

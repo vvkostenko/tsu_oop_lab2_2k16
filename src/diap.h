@@ -11,11 +11,11 @@ class Diap : public Freq
     int sum;
 public:
     Diap();
-    Diap(const Diap& fr);
+    Diap(const Diap& dp);
     ~Diap();
 
     void calc(SuppBase& sup);
-    friend std::ostream& operator << (std::ostream& out, const Diap& fr);
+    friend std::ostream& operator << (std::ostream& out, const Diap& dp);
 };
 
 #endif // DIAP_H

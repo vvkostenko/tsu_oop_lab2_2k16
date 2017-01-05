@@ -1,15 +1,18 @@
 #include "diap.h"
+#include <climits>
 
 Diap::Diap()
 {
-
+    max = 0;
+    min = INT_MAX;
+    sum = 0;
 }
 
-Diap::Diap(const Diap& fr)
+Diap::Diap(const Diap& dp)
 {
-    max = fr.max;
-    min = fr.min;
-    sum = fr.sum;
+    max = dp.max;
+    min = dp.min;
+    sum = dp.sum;
 }
 
 Diap::~Diap()
@@ -19,5 +22,19 @@ Diap::~Diap()
 
 void Diap::calc(SuppBase &sup)
 {
-    sup.get();
+    int x = sup.get();
+    if (x > max)
+        max = x;
+    if (x < min)
+        min = x;
+    sum += x;
+}
+
+std::ostream& operator << (std::ostream& out, const Diap& dp)
+{
+    out << dp.min << std::endl
+        << dp.max << std::endl
+        << dp.sum << std::endl;
+
+    return out;
 }
