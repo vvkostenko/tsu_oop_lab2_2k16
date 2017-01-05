@@ -13,15 +13,15 @@ int main(int argc, char *argv[])
 
     SuppQueue sq1(50), sq2(50);
     SuppKbrd sk1, sk2;
-    SuppFile sf, sf2;
+    SuppFile sf1, sf2;
 
     dq.calc(sq1);
     std::cout << dq << std::endl;
 
-    dk.calc(sk);
+    dk.calc(sk1);
     std::cout << dk << std::endl;
 
-    df.calc(sf);
+    df.calc(sf1);
     std::cout << df << std::endl;
 
     return 0;
