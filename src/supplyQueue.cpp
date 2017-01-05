@@ -13,7 +13,7 @@ SuppQueue::SuppQueue(int size)
         this->size = size;
         queue = new int[size];
         for (int i = 0; i < size; ++i)
-            queue[i] = random();
+            queue[i] = random() % 50;
     }
 }
 

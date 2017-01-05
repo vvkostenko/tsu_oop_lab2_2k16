@@ -17,5 +17,5 @@ SuppFile::~SuppFile()
 
 int SuppFile::get()
 {
-    return 0;
+    return -1;
 }

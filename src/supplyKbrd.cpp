@@ -19,5 +19,6 @@ int SuppKbrd::get()
 {
     int data;
     std::cin >> data;
-    return data;
+
+    return data >= 0 ? data : -1;
 }

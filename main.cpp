@@ -8,14 +8,15 @@ int main(int argc, char *argv[])
 {
     srand(time(NULL));
 
-    Diap asd;
+    Freq f;
+    Diap d;
 
-    SuppQueue i(5);
+    SuppQueue q(100);
 
-    asd.calc(i);
+    for (int j = 0; j < q.getSize(); ++j)
+        f.calc(q);
 
-    for (int j = 0; j < i.getSize(); ++j)
-        std::cout << i.get() << std::endl;
+    std::cout << f;
 
     return 0;
 }

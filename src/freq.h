@@ -6,13 +6,13 @@
 
 class Freq
 {
-    std::map<int, int> frequency;
+    std::map<int, int> *frequency;
+
 public:
     Freq();
-    Freq(const Freq& fr);
     ~Freq();
 
-    void calc(SuppBase& sup);
+    void calc(SuppBase &sup);
     friend std::ostream& operator << (std::ostream& out, const Freq& fr);
 };
 
