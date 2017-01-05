@@ -8,21 +8,21 @@ int main(int argc, char *argv[])
 {
     srand(time(NULL));
 
-    Freq f;
-    Diap d;
+    Freq fq, fk, ff;
+    Diap dq, dk, df;
 
-    SuppQueue q(100);
-    SuppKbrd k;
+    SuppQueue sq1(50), sq2(50);
+    SuppKbrd sk1, sk2;
+    SuppFile sf, sf2;
 
-//    for (int j = 0; j < q.getSize() - 1; ++j)
-//        d.calc(q);
+    dq.calc(sq1);
+    std::cout << dq << std::endl;
 
-    for (int i = 0; i < 10; ++i)
-        d.calc(k);
+    dk.calc(sk);
+    std::cout << dk << std::endl;
 
-    //d.calc(q);
-
-    std::cout << d;
+    df.calc(sf);
+    std::cout << df << std::endl;
 
     return 0;
 }

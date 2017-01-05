@@ -13,7 +13,7 @@ SuppQueue::SuppQueue(int size)
         this->size = size;
         queue = new int[size];
         for (int i = 0; i < size; ++i)
-            queue[i] = random() % 50;
+            queue[i] = random() % 5;
     }
 }
 
@@ -33,7 +33,7 @@ SuppQueue::~SuppQueue()
 
 int SuppQueue::get()
 {
-    if (++currentEl <= size)
+    if (++currentEl < size)
     {
         return queue[currentEl-1];
     }

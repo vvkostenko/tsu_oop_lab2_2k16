@@ -21,7 +21,6 @@ class SuppFile : public SuppBase
 public:
     SuppFile();
     SuppFile(int size);
-//    SuppFile(const SuppFile& anotherSup);
     ~SuppFile();
 
     int get();
@@ -32,7 +31,6 @@ class SuppKbrd : public SuppBase
 public:
      SuppKbrd();
      SuppKbrd(int data);
-//     SuppKbrd(const SuppKbrd &anotherSup);
      ~SuppKbrd();
 
      int get();

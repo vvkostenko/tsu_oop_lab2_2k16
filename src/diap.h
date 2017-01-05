@@ -5,7 +5,6 @@
 
 class Diap : public Freq
 {
-//    int *values;
     int max;
     int min;
     int sum;

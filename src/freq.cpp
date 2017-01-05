@@ -14,6 +14,9 @@ void Freq::calc(SuppBase& sup)
 {
     int key = sup.get();
 
+    if (key < 0)
+        return;
+
     auto iter = frequency->find(key);
 
     if (iter != frequency->end())
@@ -30,4 +33,6 @@ std::ostream& operator << (std::ostream& out, const Freq &fr)
     auto iter_end = fr.frequency->end();
     for (iter; iter != iter_end; ++iter)
         out << iter->first << " " << iter->second << '\n';
+
+    return out;
 }

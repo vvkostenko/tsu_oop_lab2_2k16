@@ -23,11 +23,17 @@ Diap::~Diap()
 void Diap::calc(SuppBase &sup)
 {
     int x = sup.get();
-    if (x > max)
-        max = x;
-    if (x < min)
-        min = x;
-    sum += x;
+
+    while (x >= 0)
+    {
+        if (x > max)
+            max = x;
+        if (x < min)
+            min = x;
+        sum += x;
+
+        x = sup.get();
+    }
 }
 
 std::ostream& operator << (std::ostream& out, const Diap& dp)
