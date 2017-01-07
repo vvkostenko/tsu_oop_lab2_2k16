@@ -8,12 +8,14 @@ int main(int argc, char *argv[])
 {
     srand(time(NULL));
 
-    Freq fq, fk, ff;
     Diap dq, dk, df;
+    Freq fq, fk, ff;
 
-    SuppQueue sq1(50), sq2(50);
+    SuppQueue sq1(5), sq2(5);
     SuppKbrd sk1, sk2;
     SuppFile sf1, sf2;
+
+    std::cout << sq1 << sq2 << std::endl;
 
     dq.calc(sq1);
     std::cout << dq << std::endl;
@@ -23,6 +25,15 @@ int main(int argc, char *argv[])
 
     df.calc(sf1);
     std::cout << df << std::endl;
+
+    fq.calc(sq2);
+    std::cout << fq << std::endl;
+
+    fk.calc(sk2);
+    std::cout << fk << std::endl;
+
+    ff.calc(sf2);
+    std::cout << ff << std::endl;
 
     return 0;
 }

@@ -33,7 +33,7 @@ SuppQueue::~SuppQueue()
 
 int SuppQueue::get()
 {
-    if (++currentEl < size)
+    if (++currentEl <= size)
     {
         return queue[currentEl-1];
     }
@@ -44,4 +44,12 @@ int SuppQueue::get()
 int SuppQueue::getSize()
 {
     return size;
+}
+
+std::ostream& operator << (std::ostream& out, const SuppQueue& sq)
+{
+    for (int i = 0; i < sq.size; ++i)
+        out << sq.queue[i] << ' ';
+    std::cout << std::endl;
+    return out;
 }

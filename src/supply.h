@@ -16,11 +16,11 @@ public:
 
 class SuppFile : public SuppBase
 {
-    std::ofstream file;
+    std::ifstream file;
 
 public:
     SuppFile();
-    SuppFile(int size);
+//    SuppFile(int size);
     ~SuppFile();
 
     int get();
@@ -30,7 +30,6 @@ class SuppKbrd : public SuppBase
 {
 public:
      SuppKbrd();
-     SuppKbrd(int data);
      ~SuppKbrd();
 
      int get();
@@ -50,6 +49,8 @@ public:
 
     int get();
     int getSize();
+
+    friend std::ostream& operator << (std::ostream& out, const SuppQueue& sq);
 };
 
 #endif // SUPPLY_H

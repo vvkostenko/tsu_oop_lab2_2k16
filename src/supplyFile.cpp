@@ -2,20 +2,22 @@
 
 SuppFile::SuppFile()
 {
-
+    file.open("2k16_lab2_file"); // !!!
+    if (!file.is_open())
+        std::cout << "FILE ERROR!";
 }
-
-//SuppFile::SuppFile(const SuppFile& anotherSup)
-//{
-
-//}
 
 SuppFile::~SuppFile()
 {
-
+    file.close();
 }
 
 int SuppFile::get()
 {
-    return -1;
+    if (!file)
+        return -1;
+
+    int a;
+    file >> a;
+    return a;
 }
